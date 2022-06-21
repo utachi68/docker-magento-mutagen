@@ -25,7 +25,7 @@ elif [[ "$1" == "start" ]]; then
     mutagen daemon start
     # sync files from local to docker immediately,
     # local is alpha here, so it will rewrite all your changes made on the docker side
-    mutagen create \
+    mutagen sync create \
         --label=mage2click-sync=html \
         --default-file-mode=0644 \
         --default-directory-mode=0755 \
@@ -48,7 +48,7 @@ elif [[ "$1" == "start" ]]; then
     # will get the newest changes from the docker side (see bin/composer)
     # please note that docker is alpha here,
     # so it will rewrite your unsynced files on flush command in case of any issues with sync from local to docker
-    mutagen create \
+    mutagen sync create \
         --label=mage2click-sync=vendor \
         --default-file-mode=0644 \
         --default-directory-mode=0755 \
