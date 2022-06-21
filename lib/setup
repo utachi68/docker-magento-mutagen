@@ -462,7 +462,7 @@ echo
 mkdir tmp-mage2click
 cd tmp-mage2click
 git init -qqq
-git remote add origin https://github.com/mage2click/docker-magento-mutagen
+git remote add origin https://github.com/utachi68/docker-magento-mutagen
 git fetch origin -qqq
 git checkout origin/master -- compose/magento-2
 for x in compose/magento-2/* compose/magento-2/.[!.]* compose/magento-2/..?*; do
