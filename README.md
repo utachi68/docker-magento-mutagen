@@ -70,7 +70,7 @@ Simply follow the steps during setup initialisation to configure resulted Magent
 ### One-line mode 
 
 ```bash
-curl -s https://raw.githubusercontent.com/mage2click/docker-magento-mutagen/master/lib/setup | bash -s -- --domain=magento2.test
+curl -s https://raw.githubusercontent.com/utachi68/docker-magento-mutagen/master/lib/setup | bash -s -- --domain=magento2.test
 ```
 
 The `--domain=magento2.test` above defines the hostname to use.  
@@ -97,7 +97,7 @@ Flags:
 ### Usage info output
 
 ```bash
-curl -s https://raw.githubusercontent.com/mage2click/docker-magento-mutagen/master/lib/setup | bash -s -- -h
+curl -s https://raw.githubusercontent.com/utachi68/docker-magento-mutagen/master/lib/setup | bash -s -- -h
 ```
 
 The `-h` flag above (shorthand of `--help`) defines that setup script must only output usage information. This command won't start the installation process.
