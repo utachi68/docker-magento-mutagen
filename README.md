@@ -61,7 +61,7 @@ Run one of the commands below from the directory you want to install your projec
 ### Interactive mode
 
 ```bash
-curl -s https://raw.githubusercontent.com/mage2click/docker-magento-mutagen/master/lib/setup | bash -s -- -i
+curl -s https://raw.githubusercontent.com/utachi68/docker-magento-mutagen/master/lib/setup | bash -s -- -i
 ```
 
 The `-i` flag above (shorthand of `--interactive`) defines that setup script must be launched in interactive mode.  
