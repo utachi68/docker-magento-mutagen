@@ -293,7 +293,7 @@ elif [[ "$INTERACTIVE" == "1" ]]; then
 
     echo
     echo "What PHP version to use?"
-    select OPTS in "7.0" "7.1" "7.2" "7.3"; do
+    select OPTS in "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1"; do
         case ${OPTS} in
             "7.0" ) PHP_VER='7.0'; break;;
             "7.1" ) PHP_VER='7.1'; break;;
