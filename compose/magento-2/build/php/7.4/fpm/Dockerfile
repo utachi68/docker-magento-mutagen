@@ -2,6 +2,9 @@ FROM    php:7.4-fpm
 
 LABEL   maintainer="Dmitry Shkoliar @shkoliar"
 
+ENV http_proxy=http:...
+ENV https_proxy=http:...
+
 RUN     apt-get update && apt-get install -y \
             cron \
             wget \
