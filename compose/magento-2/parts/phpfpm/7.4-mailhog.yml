@@ -1,0 +1,6 @@
+
+  phpfpm:
+    build: build/php/7.4/fpm-mailhog
+    depends_on:
+      - db
+    volumes: *appvolumes

@@ -299,10 +299,13 @@ elif [[ "$INTERACTIVE" == "1" ]]; then
             "7.1" ) PHP_VER='7.1'; break;;
             "7.2" ) PHP_VER='7.2'; break;;
             "7.3" ) PHP_VER='7.3'; break;;
+            "7.4" ) PHP_VER='7.4'; break;;
+            "8.0" ) PHP_VER='8.0'; break;;
+            "8.1" ) PHP_VER='8.1'; break;;
         esac
     done </dev/tty
 
-    PHP_VER=${PHP_VER:-7.3}
+    PHP_VER=${PHP_VER:-7.4}
 
     echo
     echo "Use \`composer install\` command during the setup process?"
@@ -353,14 +356,15 @@ else
     fi
 
     VERSION=${VERSION:-2.3.3}
-    PHP_VER=${PHP_VER:-7.3}
+    PHP_VER=${PHP_VER:-7.4}
     ELASTICSEARCH_VER=${ELASTICSEARCH_VER:-6.7.2}
 
-    VERSIONS=("7.0" "7.1" "7.2" "7.3")
+    VERSIONS=("7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1")
+
     if in_array VERSIONS "$PHP_VER"; then
         echo
         echo "$(tput bold)$(tput setaf 1)Specified PHP version ($PHP_VER) does not supported!"
-        echo "Currently supported PHP versions: 7.0, 7.1, 7.2 and 7.3"
+        echo "Currently supported PHP versions: 7.0, 7.1, 7.2 7.3 7.4 8.0 and 8.1"
         tput sgr 0
         exit
     fi

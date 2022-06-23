@@ -1,0 +1,6 @@
+
+  phpfpm:
+    build: build/php/7.4/fpm
+    depends_on:
+      - db
+    volumes: *appvolumes
