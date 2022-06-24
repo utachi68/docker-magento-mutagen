@@ -13,6 +13,9 @@ CONTAINER_SRC_SYNC_DIR=${CONTAINER_SRC_SYNC_DIR:-src}
 
 [[ -z "$1" ]] && echo "Please specify a directory or file to copy to container (ex. vendor, --all)" && exit
 
+## remove broken links first
+find -L ${CONTAINER_SRC_SYNC_DIR} -type l -exec rm -v {} \;
+
 if [[ "$1" == "--all" ]]; then
     docker cp ${CONTAINER_SRC_SYNC_DIR}/./ $(docker-compose ps -q phpfpm|awk '{print $1}'):/var/www/html/
     echo "Completed copying all files from host to container"
