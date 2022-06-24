@@ -29,7 +29,7 @@ function spinner()
 if [[ ! -z "$1" ]] && [[ -d $1 ]]; then
     printf "Copying project files:"
 
-    (rm -r src && mkdir -p src && mv -f "$1/*" "${CONTAINER_SRC_SYNC_DIR}") & spinner $!
+    (rm -r src && mv -f "$1/" "${CONTAINER_SRC_SYNC_DIR}/") & spinner $!
 
     printf " Done!"
     echo
